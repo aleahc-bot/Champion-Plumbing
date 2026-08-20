@@ -8,7 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>/* ==========================================================================
+<style>/* style.css — inlined, self-contained */
+/* ==========================================================================
    CHAMPION PLUMBING — shared design system
    Palette pulled from the logo. White dominant, gold warms, red punches.
    ========================================================================== */
@@ -450,6 +451,9 @@ footer a:hover{color:var(--red);transform:translateX(5px)}
 .lph h1{color:#fff;font-size:clamp(36px,4.7vw,64px)}
 .lph>.wrap>p{color:#C8D2F0;max-width:54ch;margin:20px auto 0}
 .lph .eyebrow{color:var(--gold);justify-content:center}
+/* kill the gold highlighter swipe in the hero — unreadable over navy, and its
+   width varies per page because it animates scaleX across the marked words */
+.lph .mark::before{display:none!important}
 .ticks{list-style:none;padding:0;margin:26px auto 0;display:inline-grid;gap:11px;text-align:left}
 .ticks li{display:flex;gap:13px;align-items:flex-start;color:#E8EDFB;font-size:16px}
 .ticks .tk{flex:none;width:24px;height:24px;border-radius:50%;background:var(--gold);display:grid;
@@ -820,7 +824,8 @@ footer a:hover{color:var(--red);transform:translateX(5px)}
 
 <a class="mobile-call" href="tel:2392572249">Call now — 239-257-2249</a>
 
-<script>/* Champion Plumbing — shared behaviour */
+<script>/* app.js — inlined, self-contained */
+/* Champion Plumbing — shared behaviour */
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
