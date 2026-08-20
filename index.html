@@ -8,8 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>/* style.css — inlined, self-contained */
-/* ==========================================================================
+<style>/* ==========================================================================
    CHAMPION PLUMBING — shared design system
    Palette pulled from the logo. White dominant, gold warms, red punches.
    ========================================================================== */
@@ -495,6 +494,14 @@ h1 .w{display:inline-block;opacity:0;transform:translateY(44px) rotate(4deg);ani
 .svcard:hover .go{letter-spacing:.16em}
 @media(max-width:1000px){.svcards{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.svcards{grid-template-columns:1fr}}
+
+
+/* the gold .mark swipe reads as a highlighter on light backgrounds, but over navy
+   it sits on top of white text and blocks it — off in every dark section */
+.hero .mark::before,
+.offers-sec .mark::before,
+.band .mark::before,
+.cta .mark::before{display:none!important}
 </style>
 </head>
 <body>
@@ -860,8 +867,7 @@ h1 .w{display:inline-block;opacity:0;transform:translateY(44px) rotate(4deg);ani
 </footer>
 
 <a class="mobile-call" href="tel:2392572249">Call now — 239-257-2249</a>
-<script>/* app.js — inlined, self-contained */
-/* Champion Plumbing — shared behaviour */
+<script>/* Champion Plumbing — shared behaviour */
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
